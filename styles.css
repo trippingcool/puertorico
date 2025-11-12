@@ -1,1 +1,96 @@
+/* Variables para colores */
+:root {
+    --light-blue: #e0f7fa; /* Un azul muy claro para el fondo */
+    --link-bg: #d1f3f7; /* Fondo del botón */
+    --link-border: #99d8e0; /* Borde del botón */
+    --header-color: #26a69a; /* Color para "tripping cool" */
+    --progreso-color: #00838f; /* Color para "PROGRESO" */
+}
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Degradado de fondo de la imagen, de un azul muy claro a un color piel muy suave */
+    background: linear-gradient(to bottom, var(--light-blue) 0%, #fbe9e7 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Ancho típico de móvil */
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Encabezado y Logos --- */
+.header {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Elimina los estilos anteriores para .logo-tripping-cool y .logo-carnival */
+/* Y añade esto: */
+
+.logo-img {
+    display: block; /* Para que cada imagen ocupe su propia línea */
+    margin: 0 auto; /* Centrar las imágenes */
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.tripping-cool-img {
+    width: 200px; /* Ajusta este valor al tamaño deseado para el logo de Tripping Cool */
+    margin-bottom: 5px; /* Espacio entre los logos */
+}
+
+.carnival-img {
+    width: 120px; /* Ajusta este valor al tamaño deseado para el logo de Carnival */
+    margin-top: 10px; /* Espacio adicional arriba del logo de Carnival */
+}
+
+/* --- Separador --- */
+.separator {
+    height: 1px;
+    background-color: #b0bec5; /* Gris claro */
+    margin: 15px 0 30px 0;
+}
+
+/* --- Título de la Ciudad --- */
+.city-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    color: var(--progreso-color);
+    margin-bottom: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+/* --- Lista de Enlaces (Botones) --- */
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los botones */
+}
+
+.excursion-link {
+    display: block;
+    padding: 15px 10px;
+    background-color: var(--link-bg);
+    border: 1px solid var(--link-border);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para darle un aspecto 3D */
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.excursion-link:hover {
+    background-color: #b2ebf2; /* Color ligeramente más oscuro al pasar el ratón */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+}
